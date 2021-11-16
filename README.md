@@ -39,7 +39,24 @@ c. Display bounding boxes on the images.
 5.  The trained classifer was saved using Pickle.
 
 #### For CNN:
+The challenge in using a neural network for this task was to keep the time required for a forward pass as low as possible while maintaining a good level of accuracy.
+The model was built using Keras and is described below.
 
+![summery](https://user-images.githubusercontent.com/63209732/142011842-702a9d1a-5f24-45ed-b449-f3b774dc27e8.png)
+
+The last FC layer has a single output node with a sigmoid activation function to obtain a probability of the classification result. 
+An adam optimizer was used to initalize and gradually decrease the learning rate during training and a binary_crossentropy loss was used since this is a binary classification problem. 
+The metric was set to accuracy.
+
+The model was trained using a batch size of 512 images for 25 epochs and an EarlyStopping() callback.
+
+20% of the data was split off and used as a validation set. 
+
+The figure below shows the training and validation loss and accuracy:
+![loss_and_accuracy_CNN](https://user-images.githubusercontent.com/63209732/142013620-00345a63-f0ce-4def-8e88-c02d3bebce1b.png)
+
+ 
+ 
 
 
 
