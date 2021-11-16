@@ -55,9 +55,15 @@ The model was trained using a batch size of 512 images for 25 epochs and an Earl
 The figure below shows the training and validation loss and accuracy:
 ![loss_and_accuracy_CNN](https://user-images.githubusercontent.com/63209732/142013620-00345a63-f0ce-4def-8e88-c02d3bebce1b.png)
 
+ ##  Object Localization
+ #### Sliding Windows:
+A sliding window approach was then used to extract image patches and feed them into either the SVC / CNN to perform classification.
+The search limits of the image were defined to keep the sliding windows within the roadway of the direction of travel of the vehicle to avoid any unnecessary false positives. 
  
- 
+## Search Optimization
+#### HOG Subsampling:
+The HOG subsampling approach allowed for efficient extraction of image patches and features from the test images. In particular, the HOG features were computed once for the entire frame and then array slicing was used to obtain the relevant HOG features. The same slicing parameters were then fed into the functions responsible for extracting the spatially binned and color histogram features. This process was repeated for the various scales of image windows required. It is important to note that the window scales need to be adjusted for HOG subsampling to maintain the same scales visualized above. This was necessary since the HOG subsampling approach downsamples the image while maintaining the same window size to achieve a scaling effect. 
 
-
+#### Image Views & Batch Prediction:
 
 
