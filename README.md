@@ -1,5 +1,4 @@
 # Vehicle_Detection_HOG
-Comparison of vehicle identification using color / HOG features and CNN model
 
 ## Project
 This project explores the problem of vehicle detection using a SVC implemented using Scikit-Learn and CNN using Keras.
