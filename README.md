@@ -13,7 +13,7 @@ The vehicle detection image set contains two labels: Non-Vehicles and Vehicles.
 
 Total 17760 images.
 
-## Pipline
+## Pipeline
 
 #### Train the classifier from the vehicle images
 a. Load vehicle images.
