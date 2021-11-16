@@ -13,4 +13,19 @@ The vehicle detection image set contains two labels: Non-Vehicles and Vehicles.
 
 Total 17760 images.
 
+## Pipline
 
+#### Train the classifier from the vehicle images
+a. Load vehicle images.
+
+b. Select required vehicle features (HOG and color features).
+
+c. Train the classfier / cnn.
+
+
+#### Detect vehicles on the test images
+a. Do a sliding window search with different window scales tp detect bounding boxes.
+
+b. Merge the bounding boxes using heat maps and thresholding.
+
+c. Display bounding boxes on the images.
