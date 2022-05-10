@@ -1,5 +1,6 @@
 # Vehicle Detection HOG
 
+
 ## Project
 This project explores the problem of vehicle detection using a SVC implemented using Scikit-Learn and CNN using Keras.
 
